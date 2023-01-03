@@ -1,3 +1,4 @@
+import logging
 from .. import client
 
 
@@ -13,3 +14,4 @@ async def on_message(message):
 
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
+        logging.info("sent message: %s", message.content)
