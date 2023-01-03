@@ -4,7 +4,7 @@
 ---
 ## Used libraries:
 + discord.py==2.1.0
-Discord API: https://discord.com/developers/docs/intro
+Discord API: https://discordpy.readthedocs.io/en/stable/index.html
 + Coded with Python 3.11.1
 ---
 
