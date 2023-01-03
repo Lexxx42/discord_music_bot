@@ -4,8 +4,8 @@
 ---
 ## Used libraries:
 + discord.py==2.1.0
-+ Coded with Python 3.11.1
 Discord API: https://discord.com/developers/docs/intro
++ Coded with Python 3.11.1
 ---
 
 ## How to start the bot?
