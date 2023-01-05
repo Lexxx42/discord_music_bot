@@ -8,6 +8,7 @@
 
 + discord.py==2.1.0
   Discord API: https://discordpy.readthedocs.io/en/stable/index.html
++ Really cool stuff here: https://github.com/Rapptz/discord.py
 + Coded with Python 3.11.1
 
 ---
@@ -15,8 +16,9 @@
 ## How to start the bot?
 
 + Quick guide to setup: https://realpython.com/how-to-make-a-discord-bot-python/
++ Use quick guide to the point when the code begins
 
-1. Get the Discord token ...
+1. Get the Discord token from Discord Developer Portal
 2. Install all requirements from requirements.txt
 
 ``` shell
