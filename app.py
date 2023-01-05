@@ -1,5 +1,5 @@
-from bot.handlers import client
-from bot import TOKEN
+import asyncio
+from bot import main
 
 if __name__ == "__main__":
-    client.run(TOKEN, log_handler=None)
+    asyncio.run(main())

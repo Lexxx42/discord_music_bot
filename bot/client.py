@@ -1,6 +1,9 @@
 """This module is for creating client for the bot."""
 import discord
 import logging
+from discord.ext import commands
+from .TOKEN import TOKEN
+from .youtube import Music
 
 logging.basicConfig(
     format=u'%(filename)s [LINE:%(lineno)d] #%(levelname)-8s [%(asctime)s]  %(message)s',
@@ -10,7 +13,23 @@ logging.basicConfig(
     level=logging.INFO,
 )
 
-intents = discord.Intents.all()
+intents = discord.Intents.default()
 intents.message_content = True
 
-client = discord.Client(intents=intents)
+bot = commands.Bot(
+    command_prefix=commands.when_mentioned_or("!"),
+    description='Relatively simple music bot example',
+    intents=intents,
+)
+
+
+@bot.event
+async def on_ready():
+    print(f'Logged in as {bot.user} (ID: {bot.user.id})')
+    print('------')
+
+
+async def main():
+    async with bot:
+        await bot.add_cog(Music(bot))
+        await bot.start(TOKEN)

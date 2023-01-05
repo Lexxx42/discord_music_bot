@@ -1,4 +1,4 @@
-from .client import client
 from .TOKEN import TOKEN
+from .client import main
 
-__all__ = ["client", "TOKEN"]
+__all__ = ["main", "TOKEN"]
