@@ -1,15 +1,21 @@
-# discord_music_bot
+# discord_music_bot Work in process
+
 + Simple discord music bot that plays YouTube music in your channel.
 
 ---
+
 ## Used libraries:
+
 + discord.py==2.1.0
-Discord API: https://discordpy.readthedocs.io/en/stable/index.html
+  Discord API: https://discordpy.readthedocs.io/en/stable/index.html
 + Coded with Python 3.11.1
+
 ---
 
 ## How to start the bot?
+
 + Quick guide to setup: https://realpython.com/how-to-make-a-discord-bot-python/
+
 1. Get the Discord token ...
 2. Install all requirements from requirements.txt
 
@@ -24,3 +30,4 @@ pip install -r requirements.txt
 DISCORD_TOKEN=YOUR_BOT_TOKEN  
 ```
 
+5. Install FFmpeg: https://ffmpeg.org/download.html
