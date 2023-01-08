@@ -1,3 +1,4 @@
+"""This module is a starting point for discord bot."""
 import asyncio
 from bot import main
 
