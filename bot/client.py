@@ -29,6 +29,19 @@ async def on_ready():
     print('------')
 
 
+@bot.event  # dm_only() ???
+async def on_message(message):
+    if message.author == bot.user:
+        return
+
+    if message.content.startswith('$hello'):
+        print(message)
+        if "channel=<DMChannel" in message:
+            # message.content.startswith('https://www.youtube.'):
+            await message.channel.send('Hello!')
+            logging.info("sent message: %s", message.content)
+
+
 async def main():
     async with bot:
         await bot.add_cog(Music(bot))
