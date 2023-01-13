@@ -29,22 +29,6 @@ async def on_ready():
     print('------')
 
 
-@bot.event  # dm_only() ???
-async def on_message(message):
-    if message.author == bot.user:
-        return
-
-    if not message.guild:
-        try:
-            if message.content.startswith('https://www.youtube.') or message.content.startswith('https://youtu.be'):
-                await message.channel.send("This is a DM.")
-        except discord.errors.Forbidden:
-            pass
-    else:
-        pass
-        logging.info("sent message: %s", message.content)
-
-
 async def main():
     async with bot:
         await bot.add_cog(Music(bot))
