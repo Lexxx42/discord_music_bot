@@ -34,12 +34,15 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    if message.content.startswith('$hello'):
-        print(message)
-        if "channel=<DMChannel" in message:
-            # message.content.startswith('https://www.youtube.'):
-            await message.channel.send('Hello!')
-            logging.info("sent message: %s", message.content)
+    if not message.guild:
+        try:
+            if message.content.startswith('https://www.youtube.') or message.content.startswith('https://youtu.be'):
+                await message.channel.send("This is a DM.")
+        except discord.errors.Forbidden:
+            pass
+    else:
+        pass
+        logging.info("sent message: %s", message.content)
 
 
 async def main():
