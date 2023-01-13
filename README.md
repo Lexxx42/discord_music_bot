@@ -1,4 +1,4 @@
-# discord_music_bot Work in process
+# discord_music_bot
 
 + Simple discord music bot that plays YouTube music in your channel.
 
