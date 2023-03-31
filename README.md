@@ -121,3 +121,33 @@ Don't forget to save changes!
 ```shell
 docker-compose up --build
 ```
+
+### Added docker image to public repository
+
+[Docker Hub](https://hub.docker.com/repository/docker/alex42konukhov/discord_music_bot/general)
+
+If you are using docker image from DockerHub use following commands:
+
+1. To pull repository use:
+
+```docker
+docker pull alex42konukhov/discord_music_bot:debian-bullseye
+```
+
+2. Create `.env` file and add your telegram token and yandex weather api key
+
+```
+DISCORD_TOKEN=YOUR_BOT_TOKEN
+```
+
+3. Copy the modified configuration file from your host machine to the container's file system:
+
+```docker
+docker cp .env docker_container_id:/discord-bot/.env
+```
+
+4. Run docker container in detached mode
+
+```docker
+docker start container_id
+```
