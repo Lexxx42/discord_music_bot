@@ -12,6 +12,7 @@
 + Coded with Python 3.11.1
 
 ---
+
 ## Available commands:
 
 + join - bot joins user's voice chat
@@ -73,7 +74,6 @@ DISCORD_TOKEN=YOUR_BOT_TOKEN
 
 5. Install FFmpeg: https://ffmpeg.org/download.html
 
-
 # New features with docker
 
 ## If there is an error about lack of access, add current user to the docker group:
@@ -113,7 +113,6 @@ nano .env
 DISCORD_TOKEN=YOUR_BOT_TOKEN
 ```
 
-
 Don't forget to save changes!
 
 5. Start the build
@@ -134,19 +133,25 @@ If you are using docker image from DockerHub use following commands:
 docker pull alex42konukhov/discord_music_bot:debian-bullseye
 ```
 
-2. Create `.env` file and add your telegram token and yandex weather api key
+2. Create a container from the image. Should be an error message.
+
+```docker
+docker run alex42konukhov/discord_music_bot:debian-bullseye
+```
+
+3. Create `.env` file and add your telegram token and yandex weather api key
 
 ```
-DISCORD_TOKEN=YOUR_BOT_TOKEN
+DISCORD_TOKEN=YOUR_BOT_TOKEN 
 ```
 
-3. Copy the modified configuration file from your host machine to the container's file system:
+4. Copy the modified configuration file from your host machine to the container's file system:
 
 ```docker
 docker cp .env docker_container_id:/discord-bot/.env
 ```
 
-4. Run docker container in detached mode
+5. Run docker container in detached mode
 
 ```docker
 docker start container_id
