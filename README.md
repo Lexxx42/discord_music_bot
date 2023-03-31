@@ -72,3 +72,52 @@ DISCORD_TOKEN=YOUR_BOT_TOKEN
 ```
 
 5. Install FFmpeg: https://ffmpeg.org/download.html
+
+
+# New features with docker
+
+## If there is an error about lack of access, add current user to the docker group:
+
+```shell
+sudo usermod -a -G docker [user]
+newgrp docker
+```
+
+## Use this sequence of commands to run the container:
+
+1. To run the application in docker, you need to install docker-compose:
+
+```shell
+sudo apt install docker-compose 
+```
+
+2. Clone the repository
+
+```shell
+git clone https://github.com/Lexxx42/discord_music_bot
+```
+
+3. Change directory to project dir
+
+```shell
+cd discord_music_bot/
+```
+
+4. Add your token for discord bot
+
+```shell
+nano .env
+```
+
+```
+DISCORD_TOKEN=YOUR_BOT_TOKEN
+```
+
+
+Don't forget to save changes!
+
+5. Start the build
+
+```shell
+docker-compose up --build
+```
